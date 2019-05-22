@@ -46,12 +46,6 @@ body {
   color: #d4a59a;
   font-family: 'PT Sans', sans-serif;
 }
-.footer {
-  display: flex;
-  justify-content: none;
-  align-items: none;
-  flex-direction: row;
-}
 .nav-bar {
   width: 100%;
   display: flex;
@@ -273,4 +267,28 @@ body {
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: bold;
+}
+.footer {
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+  background-color: #5c2018;
+  width: 100%;
+}
+.footer div {
+  padding: 0 1rem;
+}
+.footer h3 {
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+}
+.footer img {
+  block-size: 2rem;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
 }
