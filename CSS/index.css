@@ -77,12 +77,16 @@ body {
   align-items: center;
   flex-direction: row;
   flex: 3;
-  font-size: 11px;
+  font-size: 1.5rem;
 }
 .nav-bar .container .container-left span {
   cursor: pointer;
-  margin-right: 25%;
+  margin-right: 15%;
   font-weight: bold;
+}
+.nav-bar .container .container-left img {
+  width: auto;
+  height: 2rem;
 }
 .nav-bar .container .container-center {
   display: flex;
@@ -135,6 +139,7 @@ body {
   overflow: hidden;
   width: 100%;
   margin: auto;
+  margin-top: 45px;
 }
 /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
 .carousel-wrapper * {
@@ -150,7 +155,6 @@ body {
 .carousel__photo {
   opacity: 0;
   position: absolute;
-  top: 47px;
   width: 100%;
   margin: auto;
   z-index: 100;
@@ -270,25 +274,30 @@ body {
 }
 .footer {
   display: flex;
-  justify-content: none;
-  align-items: none;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  background-color: #5c2018;
   width: 100%;
+  background-color: #5c2018;
 }
 .footer div {
   padding: 0 1rem;
 }
-.footer h3 {
+.footer .app-link {
   display: flex;
   justify-content: none;
   align-items: none;
-  flex-direction: row;
+  flex-direction: column;
 }
 .footer img {
   block-size: 2rem;
+  margin-bottom: 0.75rem;
 }
 .footer ul {
   list-style: none;
   padding: 0;
+}
+.footer ul li:hover {
+  cursor: pointer;
+  color: #4285f4;
 }
