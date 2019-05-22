@@ -1,0 +1,24 @@
+{
+  "name": "build",
+  "version": "1.0.0",
+  "description": "Landing Page 02 for Refugee Stories Labs SG1 by Tigran Asriyan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/labs-sg1-refugee-stories/landingpage02.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/labs-sg1-refugee-stories/landingpage02/issues"
+  },
+  "homepage": "https://github.com/labs-sg1-refugee-stories/landingpage02#readme",
+  "dependencies": {
+    "eslint": "5.16.0"
+  }
+}
