@@ -5,28 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./CSS/index.css" />
-    <script defer src="./JS/carousel.js" async></script>
+    <script defer src="./components/carousel/carousel.js" async></script>
 </head>
-<body>
-    <header>
 
-    </header>
-    
-    <!-- Carousel -->
-    <div class="carousel-wrapper">
-            <div class="carousel">
-        
-              <img class="carousel__photo initial" src="./IMG/Slide1.jpg">
-              <img class="carousel__photo" src="./IMG/Slide2.jpg">
-              <img class="carousel__photo" src="./IMG/Slide3.jpg">
-              <img class="carousel__photo" src="./IMG/Slide4.jpg">
-              <img class="carousel__photo" src="./IMG/Slide5.jpg">
-              
-              <div class="carousel__button--next"></div>
-              <div class="carousel__button--prev"></div>
-        
-            </div>
+<body>
+  <!-- Navigation Component -->
+    <div class="nav-bar">
+        <div class="container">
+          <div class="container-left">
+            <span>LOGO IMAGE HERE</span>
           </div>
+          <div class="container-center">
+            <span>DISCOVER</span><span>SHARE</span><span>ABOUT</span>
+          </div>
+          <div class="container-right">
+            <span>LOG IN</span>
+            <span>SIGN UP</span>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Carousel Component-->
+    <div class="carousel-wrapper">
+      <div class="carousel">
+  
+        <img class="carousel__photo initial" src="./IMG/Slide1.jpg">
+        <img class="carousel__photo" src="./IMG/Slide2.jpg">
+        <img class="carousel__photo" src="./IMG/Slide3.jpg">
+        <img class="carousel__photo" src="./IMG/Slide4.jpg">
+        <img class="carousel__photo" src="./IMG/Slide5.jpg">
+        
+        <div class="carousel__button--next"></div>
+        <div class="carousel__button--prev"></div>
+  
+      </div>
+    </div>
+
+    <!-- Discover Stories Component -->
+    <div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div>
+        <img src="#" alt="logo"/>
+      </div>
+      <div>
+        <h3>About</h3>
+        <ul>
+          <li>About us</li>
+          <li>How it works</li>
+          <li>FAQ</li>
+          <li>Terms of Service</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <ul>
+          <li>Login</li>
+          <li>Sign up</li>
+          <li>Share Anonymously</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Get the app</h3>
+          <img src="#" alt="app store"/>
+          <img src="#" alt="google play"/>
+      </div>
+      <div>
+          <h3>Follow us</h3>
+            <img src="#" alt="Facebook"/>
+            <img src="#" alt="Instagram"/>
+            <img src="#" alt="Twitter"/>
+        </div>
+    </div>
 
 </body>
 </html>
