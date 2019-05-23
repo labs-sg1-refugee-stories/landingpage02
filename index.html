@@ -3,29 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refugee Stories</title>
+    <title>Refugee Stories - Home</title>
     <link rel="stylesheet" type="text/css" href="./CSS/index.css" />
     <script defer src="./components/carousel/carousel.js" async></script>
+    <script defer src="./components/navigation/navigation.js" async></script>
+    <script defer src="./components/story/story.js" async></script>
 </head>
 
 <body>
   <!-- Navigation Component -->
     <div class="nav-bar">
         <div class="container">
-          <img class="menu-button" src="./img/icons/menu.png"/>
           <div class="container-left">
-            <!-- <img src="img/logo.png" alt="logo"/> -->
-            <span>Refugee Stories</span>
+            <img src="img/logo.png" alt="logo"/>
+            <a href="index.html"><span>Refugee Stories</span></a>
           </div>
           <div class="container-center">
-            <span>DISCOVER</span><span>SHARE</span><span>ABOUT</span>
+            <span>DISCOVER</span>
+            <span>SHARE</span>
+            <a href="about.html" ><span>ABOUT</span></a>
           </div>
           <div class="container-right">
             <span>LOG IN</span>
             <span>SIGN UP</span>
           </div>
         </div>
+            
+        <div class="mobile-menu">
+            <img class="menu-button" src="./img/icons/menu.png"/>
+            <h1>Refugee Stories</h1>
+            <img src="img/logo.png" alt="logo"/>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>Discover</li>
+            <li>Share</li>
+            <li>About</li>
+            <li>Log in</li>
+            <li>Sign up</li>
+          </ul>
       </div>
+        
+    </div>
     
     <!-- Carousel Component-->
     <div class="carousel-wrapper">
@@ -45,55 +64,77 @@
 
     <!-- Tag Line -->
     <div class="tag-line">
-      <h1>Discover Stories and Share Your Own</h1>
+      <h1>Discover Stories and Share Your Own Experience</h1>
       <h2>Join thousands of refugees just like you and explore their stories.</h2>
       <div class=tag-line-button>
-        <div class="Discover"></div>
-
+        <div class="button">Discover</div>
+        <div class="button">Share</div>
       </div>
     </div>
 
+    <!-- Tabs Stories Component -->
+    <div class="tabs">
+        <div class="topics">
+          <span class="title">Featured Stories:</span>
+          <div data-tab="World" class="tab active-tab">World</div>
+          <div data-tab="Russia" class="tab">Russia</div>
+          <div data-tab="Syria" class="tab">Syria</div>
+          <div data-tab="Lybia" class="tab">Lybia</div>
+          <div data-tab="Cuba" class="tab">Cuba</div>
+        </div>
+      </div>
     <!-- Discover Stories Component -->
     <div class="story-container">
-      <div class="story">
+      <div class="story" data-tab="Russia">
         <div class="story-teller">
             <div class="img-container">
               <img src="#" alt="Photo of author"/>
             </div>
-            <span>Shared by Anonymous</span>
+            <span>shared by Anonymous</span>
           </div>
         <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
-        
       </div>
 
-      <div class="story">
+      <div class="story" data-tab="Lybia">
         <div class="story-teller">
             <div class="img-container">
               <img src="#" alt="Photo of author"/>
             </div>
-            <span>Shared by Mohammad Al'Khalim</span>
+            <span>shared by Mohammad Al'Khalim</span>
           </div>  
-        <div class="text">Porem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
-          
-        </div>
-        <div class="story">
-            <div class="story-teller">
-              <div class="img-container">
-                <img src="#" alt="Photo of author"/>
-              </div>
-              <span>Shared by Fatim Abdullah</span>
-            </div>
-            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
-            
+        <div class="text">Porem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>   
+      </div>
+      <div class="story" data-tab="Syria">
+        <div class="story-teller">
+          <div class="img-container">
+            <img src="#" alt="Photo of author"/>
           </div>
-
+          <span>shared by Fatim Abdullah</span>
+        </div>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
+      </div>
+      <div class="story" data-tab="Cuba">
+          <div class="story-teller">
+            <div class="img-container">
+              <img src="#" alt="Photo of author"/>
+            </div>
+            <span>shared by Marco Perez</span>
+          </div>
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
+      </div>
+      <div class="story" data-tab="Syria">
+          <div class="story-teller">
+            <div class="img-container">
+              <img src="#" alt="Photo of author"/>
+            </div>
+            <span>shared by Harout Kabanyan</span>
+          </div>
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-      <div>
-        <img src="#" alt="logo"/>
-      </div>
       <div>
         <h3>About</h3>
         <ul>
@@ -111,16 +152,16 @@
           <li>Share Anonymously</li>
         </ul>
       </div>
-      <div>
+      <div class="app-link">
         <h3>Get the app</h3>
         <img src="./img/icons/app-store.png" alt="app store"/>
         <img src="./img/icons/google-play.png" alt="google play"/>
       </div>
       <div>
           <h3>Follow us</h3>
-            <img src="./img/icons/facebook-icon.png" alt="Facebook"/>
-            <img src="./img/icons/instagram-icon.png" alt="Instagram"/>
-            <img src="./img/icons/twitter-icon.png" alt="Twitter"/>
+          <img src="./img/icons/facebook-icon.png" alt="Facebook"/>
+          <img src="./img/icons/instagram-icon.png" alt="Instagram"/>
+          <img src="./img/icons/twitter-icon.png" alt="Twitter"/>
         </div>
     </div>
 

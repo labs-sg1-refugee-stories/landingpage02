@@ -1,18 +1,26 @@
 .footer {
-	.flex();
-	.width();
+	.flex(center, center, row);
+	width: 100%;
 	background-color: @primary-color-rose;
 	div {
 		padding: 0 1rem;
 	}
-	h3 {
-		.flex(center, center, column);
+	.app-link {
+		.flex(none, none, column);
 	}
+
 	img {
 		block-size: 2rem;
+		margin-bottom: 0.75rem;
 	}
 	ul {
 		list-style: none;
 		padding: 0;
+		li {
+			&:hover {
+				cursor: pointer;
+				color: @primary-color-blue;
+			}
+		}
 	}
 }
