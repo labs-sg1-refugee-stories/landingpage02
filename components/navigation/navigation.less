@@ -4,6 +4,8 @@
 	position: fixed;
 	height: 44px;
 	background-color: @primary-color-rose;
+	position: fixed;
+	z-index: 10;
 
 	.mobile-menu {
 		display: none;
@@ -15,12 +17,12 @@
 		.mobile-menu {
 			width: 100%;
 			.flex(space-around, center, row);
-			height: 50px;
+			//height: 40px;
 			background-color: @primary-color-rose;
 			color: @secondary-color-beige;
 			position: fixed;
 			top: 0;
-			z-index: 2;
+			z-index: 7;
 
 			h1 {
 				margin: 0;
@@ -38,16 +40,18 @@
 		.menu {
 			display: none;
 			position: fixed;
-			top: 75px;
+			top: 44px;
 			left: 0;
 			width: 350px;
 			height: 100vh; /* This give the height 100% of the screen or, '100% of View Height' */
-			background-color: @secondary-color-rose;
+			background-color: @secondary-color-beige;
+			color: @primary-color-rose;
 			border: 1px solid @primary-color-rose;
 			border-left: none;
 			border-bottom: none;
-			z-index: 1002; /* This set the layer level of the element, it has precendence over initial level of 1*/
+			z-index: 10; /* This set the layer level of the element, it has precendence over initial level of 1*/
 			ul {
+				padding: 0;
 				li {
 					list-style-type: none;
 					font-size: 32px;

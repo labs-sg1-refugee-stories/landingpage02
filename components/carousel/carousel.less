@@ -26,7 +26,8 @@
 	position: absolute;
 	width: 100%;
 	margin: auto;
-	z-index: 100;
+	//z-index: 100;
+	z-index: 2;
 	transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
 }
 
@@ -35,13 +36,15 @@
 .carousel__photo.active {
 	opacity: 1;
 	position: relative;
-	z-index: 900;
+	//z-index: 900;
+	z-index: 4;
 }
 
 /* Set 'z-index' to sit behind our '.active' item. */
 .carousel__photo.prev,
 .carousel__photo.next {
-	z-index: 800;
+	//z-index: 800;
+	z-index: 5;
 }
 
 /* Translate previous item to the left */
@@ -65,7 +68,8 @@
 	transform: translateY(-50%);
 	border-radius: 50%;
 	cursor: pointer;
-	z-index: 1001; /* Sit on top of everything */
+	//z-index: 1001;
+	z-index: 6; /* Sit on top of everything */
 	border: 1px solid black;
 	/*  opacity: 0;  Hide buttons until carousel is initialised 
     transition:opacity 1s;*/
