@@ -143,7 +143,6 @@ body {
     border-left: none;
     border-bottom: none;
     z-index: 10;
-    /* This set the layer level of the element, it has precendence over initial level of 1*/
   }
   .nav-bar .menu ul {
     padding: 0;
@@ -254,7 +253,7 @@ body {
   overflow: hidden;
   width: 100%;
   margin: auto;
-  margin-top: 45px;
+  margin-top: 44px;
 }
 /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
 .carousel-wrapper * {
