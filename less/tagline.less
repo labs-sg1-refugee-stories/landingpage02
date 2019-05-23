@@ -1,0 +1,32 @@
+.tag-line {
+	margin: 0 10%;
+	h2 {
+		color: @secondary-color-beige;
+	}
+	.tag-line-button {
+		.flex(center, center, row);
+		@media (max-width: @mobile-view) {
+			.flex(center, center, column);
+		}
+		.button {
+			font-size: 2rem;
+			background-color: @primary-color-blue;
+			border-radius: 0.5rem;
+			width: 100%;
+			text-align: center;
+			cursor: pointer;
+			margin-bottom: 10%;
+			padding: 0.5rem;
+			&:first-child {
+				margin-right: 10%;
+				@media (max-width: @mobile-view) {
+					margin-right: 0;
+				}
+			}
+			&:hover {
+				background-color: lighten(@primary-color-blue, 20%);
+				color: @primary-color-rose;
+			}
+		}
+	}
+}
