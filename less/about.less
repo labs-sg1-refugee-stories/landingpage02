@@ -5,3 +5,30 @@
 		border: 1px solid @primary-color-rose;
 	}
 }
+
+.team {
+	margin: 1rem;
+	.flex(space-evenly);
+	width: 100%;
+	flex-flow: wrap;
+
+	.teammate {
+		.flex(space-between, none, column);
+		width: 200px;
+		.img {
+			height: 200px;
+			img {
+				width: 200px;
+				border-radius: 50%;
+			}
+			//object-fit: cover;
+		}
+	}
+	.social-link {
+		//object-fit: cover;
+		height: 40px;
+		img {
+			width: 40px;
+		}
+	}
+}
