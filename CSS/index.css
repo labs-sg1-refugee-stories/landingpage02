@@ -47,16 +47,69 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 .nav-bar {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: column;
   flex-direction: row;
+  width: 100%;
   position: fixed;
   height: 44px;
   background-color: #5c2018;
 }
-.nav-bar .container {
+.nav-bar .mobile-menu {
+  display: none;
+}
+.nav-bar .menu {
+  display: none;
+}
+@media (max-width: 500px) {
+  .nav-bar .mobile-menu {
+    width: 100%;
+    height: 75px;
+    background-color: #5c2018;
+    color: #f3e0dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  .nav-bar .mobile-menu h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  .nav-bar .menu-button {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+  }
+  .nav-bar .menu {
+    display: none;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 350px;
+    height: 100vh;
+    /* This give the height 100% of the screen or, '100% of View Height' */
+    background-color: #bc4639;
+    border: 1px solid #5c2018;
+    border-left: none;
+    border-bottom: none;
+    z-index: 1002;
+    /* This set the layer level of the element, it has precendence over initial level of 1*/
+  }
+  .nav-bar .menu ul li {
+    list-style-type: none;
+    font-size: 32px;
+    padding: 30px 0;
+    text-align: center;
+  }
+  .nav-bar .menu--open {
+    display: block;
+  }
+}
+.container {
   width: 100%;
   display: flex;
   justify-content: none;
@@ -66,12 +119,12 @@ body {
   letter-spacing: 1px;
   padding: 0 10px;
 }
-@media (min-width: 1280px) {
-  .nav-bar .container {
-    width: 1280px;
+@media (max-width: 500px) {
+  .container {
+    display: none;
   }
 }
-.nav-bar .container .container-left {
+.container .container-left {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -79,16 +132,16 @@ body {
   flex: 3;
   font-size: 1.5rem;
 }
-.nav-bar .container .container-left span {
+.container .container-left span {
   cursor: pointer;
   margin-right: 15%;
   font-weight: bold;
 }
-.nav-bar .container .container-left img {
+.container .container-left img {
   width: auto;
   height: 2rem;
 }
-.nav-bar .container .container-center {
+.container .container-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,18 +150,18 @@ body {
   font-size: 1rem;
   color: #f3e0dc;
 }
-.nav-bar .container .container-center span {
+.container .container-center span {
   cursor: pointer;
   margin-right: 5%;
 }
-.nav-bar .container .container-center span:last-child {
+.container .container-center span:last-child {
   margin-right: 0;
 }
-.nav-bar .container .container-center span:hover {
+.container .container-center span:hover {
   text-decoration: underline;
   color: #d4a59a;
 }
-.nav-bar .container .container-right {
+.container .container-right {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -117,17 +170,17 @@ body {
   font-size: 1rem;
   font-weight: bold;
 }
-.nav-bar .container .container-right span {
+.container .container-right span {
   cursor: pointer;
   margin-right: 8%;
   padding: 0 2%;
   border: 1px solid #4285f4;
   border-radius: 8%;
 }
-.nav-bar .container .container-right span:last-child {
+.container .container-right span:last-child {
   margin-right: 0;
 }
-.nav-bar .container .container-right span:hover {
+.container .container-right span:hover {
   color: #4285f4;
 }
 /* Parent wrapper to carousel. Width can be changed as needed. */
@@ -147,6 +200,10 @@ body {
 }
 /* Setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
 .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
