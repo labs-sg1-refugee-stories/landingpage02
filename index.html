@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./CSS/index.css" />
     <script defer src="./components/carousel/carousel.js" async></script>
     <script defer src="./components/navigation/navigation.js" async></script>
+    <script defer src="./components/story/story.js" async></script>
 </head>
 
 <body>
@@ -71,40 +72,65 @@
       </div>
     </div>
 
+    <!-- Tabs Stories Component -->
+    <div class="tabs">
+        <div class="topics">
+          <span class="title">Featured Stories:</span>
+          <div data-tab="World" class="tab active-tab">World</div>
+          <div data-tab="Russia" class="tab">Russia</div>
+          <div data-tab="Syria" class="tab">Syria</div>
+          <div data-tab="Lybia" class="tab">Lybia</div>
+          <div data-tab="Cuba" class="tab">Cuba</div>
+        </div>
+      </div>
     <!-- Discover Stories Component -->
     <div class="story-container">
-      <div class="story">
+      <div class="story" data-tab="Russia">
         <div class="story-teller">
             <div class="img-container">
               <img src="#" alt="Photo of author"/>
             </div>
-            <span>Shared by Anonymous</span>
+            <span>shared by Anonymous</span>
           </div>
         <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
-        
       </div>
 
-      <div class="story">
+      <div class="story" data-tab="Lybia">
         <div class="story-teller">
             <div class="img-container">
               <img src="#" alt="Photo of author"/>
             </div>
-            <span>Shared by Mohammad Al'Khalim</span>
+            <span>shared by Mohammad Al'Khalim</span>
           </div>  
-        <div class="text">Porem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
-          
-        </div>
-        <div class="story">
-            <div class="story-teller">
-              <div class="img-container">
-                <img src="#" alt="Photo of author"/>
-              </div>
-              <span>Shared by Fatim Abdullah</span>
-            </div>
-            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
-            
+        <div class="text">Porem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>   
+      </div>
+      <div class="story" data-tab="Syria">
+        <div class="story-teller">
+          <div class="img-container">
+            <img src="#" alt="Photo of author"/>
           </div>
-
+          <span>shared by Fatim Abdullah</span>
+        </div>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
+      </div>
+      <div class="story" data-tab="Cuba">
+          <div class="story-teller">
+            <div class="img-container">
+              <img src="#" alt="Photo of author"/>
+            </div>
+            <span>shared by Marco Perez</span>
+          </div>
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
+      </div>
+      <div class="story" data-tab="Syria">
+          <div class="story-teller">
+            <div class="img-container">
+              <img src="#" alt="Photo of author"/>
+            </div>
+            <span>shared by Harout Kabanyan</span>
+          </div>
+          <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam ex optio eaque, quae itaque quidem provident et in ut dolorem rerum pariatur harum perspiciatis maiores facilis inventore cupiditate repellat! </div>
+      </div>
     </div>
 
     <!-- Footer -->
