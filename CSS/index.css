@@ -466,7 +466,8 @@ body {
   color: #4285f4;
 }
 .about-container {
-  margin: 2rem 1rem;
+  margin: 0 1rem;
+  margin-top: 2rem;
 }
 .about-container .about-border {
   border: 1px solid #5c2018;
@@ -483,9 +484,14 @@ body {
 .team .teammate {
   display: flex;
   justify-content: space-between;
-  align-items: none;
+  align-items: center;
   flex-direction: column;
-  width: 200px;
+  width: 210px;
+  background-color: #f3e0dc;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #5c2018;
 }
 .team .teammate .img {
   height: 200px;
@@ -493,10 +499,28 @@ body {
 .team .teammate .img img {
   width: 200px;
   border-radius: 50%;
+  border: 1px solid #5c2018;
+}
+.team .teammate h4 {
+  color: #5c2018;
+  margin: 0.5rem;
+  text-align: center;
+}
+.team .teammate p {
+  color: #bc4639;
+  margin: 0.5rem;
+  text-align: center;
 }
 .team .social-link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
   height: 40px;
 }
 .team .social-link img {
   width: 40px;
+}
+.team .social-link .github {
+  width: 35px;
 }

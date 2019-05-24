@@ -1,5 +1,6 @@
 .about-container {
-	margin: 2rem 1rem;
+	margin: 0 1rem;
+	margin-top: 2rem;
 
 	.about-border {
 		border: 1px solid @primary-color-rose;
@@ -13,22 +14,42 @@
 	flex-flow: wrap;
 
 	.teammate {
-		.flex(space-between, none, column);
-		width: 200px;
+		.flex(space-between, center, column);
+		width: 210px;
+		background-color: @secondary-color-beige;
+		margin: 0.5rem;
+		padding: 0.5rem;
+		border-radius: 0.25rem;
+		border: 1px solid @primary-color-rose;
 		.img {
 			height: 200px;
 			img {
 				width: 200px;
 				border-radius: 50%;
+				border: 1px solid @primary-color-rose;
 			}
-			//object-fit: cover;
+		}
+		h4 {
+			color: @primary-color-rose;
+			margin: 0.5rem;
+			text-align: center;
+		}
+		p {
+			color: @secondary-color-rose;
+			margin: 0.5rem;
+			text-align: center;
 		}
 	}
 	.social-link {
 		//object-fit: cover;
+		.flex(space-around, center, row);
 		height: 40px;
 		img {
 			width: 40px;
+		}
+		//To reduce the size of the github img relative to linkedin img
+		.github {
+			width: 35px;
 		}
 	}
 }
