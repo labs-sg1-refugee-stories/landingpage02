@@ -46,6 +46,9 @@ body {
   color: #d4a59a;
   font-family: 'PT Sans', sans-serif;
 }
+a {
+  text-decoration: none;
+}
 .tag-line {
   margin: 0 10%;
 }
@@ -98,9 +101,11 @@ body {
   background-color: #5c2018;
   position: fixed;
   z-index: 10;
+  color: #f3e0dc;
 }
 .nav-bar .mobile-menu {
   display: none;
+  color: #f3e0dc;
 }
 .nav-bar .menu {
   display: none;
@@ -190,6 +195,11 @@ body {
   font-weight: bold;
   white-space: nowrap;
 }
+@media (max-width: 800px) {
+  .container .container-left span {
+    display: none;
+  }
+}
 .container .container-left img {
   width: auto;
   height: 2rem;
@@ -213,6 +223,11 @@ body {
 }
 .container .container-center span:last-child {
   margin-right: 0;
+}
+@media (max-width: 800px) {
+  .container .container-center span:last-child {
+    display: none;
+  }
 }
 .container .container-center span:hover {
   text-decoration: underline;
