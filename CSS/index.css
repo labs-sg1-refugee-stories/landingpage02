@@ -127,6 +127,8 @@ a {
   .nav-bar .mobile-menu h1 {
     margin: 0;
     font-size: 1.8rem;
+    text-decoration: none;
+    color: #f3e0dc;
   }
   .nav-bar .mobile-menu img {
     height: 2em;
@@ -458,38 +460,46 @@ a {
   color: #5c2018;
   border: 2px solid #5c2018;
 }
-.footer {
+.footer-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   width: 100%;
   background-color: #5c2018;
 }
-.footer div {
+.footer-container div {
   padding: 0 1rem;
 }
-.footer .app-link {
-  display: flex;
-  justify-content: none;
-  align-items: none;
-  flex-direction: column;
+@media (max-width: 500px) {
+  .footer-container div:last-child {
+    display: none;
+  }
 }
-.footer img {
+.footer-container a {
+  text-decoration: none;
+  color: #f3e0dc;
+}
+.footer-container a:hover {
+  color: #4285f4;
+}
+.footer-container img {
   block-size: 2rem;
   margin-bottom: 0.75rem;
 }
-.footer ul {
+.footer-container ul {
   list-style: none;
   padding: 0;
+  color: #f3e0dc;
 }
-.footer ul li:hover {
+.footer-container ul li:hover {
   cursor: pointer;
   color: #4285f4;
 }
 .about-container {
   margin: 0 1rem;
   margin-top: 2rem;
+  color: #f3e0dc;
 }
 .about-container .about-border {
   border: 1px solid #5c2018;
