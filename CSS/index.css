@@ -35,7 +35,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  max-width: 900px;
 }
 body {
   display: flex;
@@ -45,6 +44,11 @@ body {
   background-color: #bc4639;
   color: #d4a59a;
   font-family: 'PT Sans', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
 }
 .tag-line {
   margin: 0 10%;
@@ -94,13 +98,15 @@ body {
   align-items: column;
   flex-direction: row;
   width: 100%;
+  position: fixed;
   height: 44px;
   background-color: #5c2018;
-  position: fixed;
   z-index: 10;
+  color: #f3e0dc;
 }
 .nav-bar .mobile-menu {
   display: none;
+  color: #f3e0dc;
 }
 .nav-bar .menu {
   display: none;
@@ -121,6 +127,8 @@ body {
   .nav-bar .mobile-menu h1 {
     margin: 0;
     font-size: 1.8rem;
+    text-decoration: none;
+    color: #f3e0dc;
   }
   .nav-bar .mobile-menu img {
     height: 2em;
@@ -190,6 +198,11 @@ body {
   font-weight: bold;
   white-space: nowrap;
 }
+@media (max-width: 800px) {
+  .container .container-left span {
+    display: none;
+  }
+}
 .container .container-left img {
   width: auto;
   height: 2rem;
@@ -213,6 +226,11 @@ body {
 }
 .container .container-center span:last-child {
   margin-right: 0;
+}
+@media (max-width: 800px) {
+  .container .container-center span:last-child {
+    display: none;
+  }
 }
 .container .container-center span:hover {
   text-decoration: underline;
@@ -245,7 +263,22 @@ body {
   color: #4285f4;
 }
 /* Parent wrapper to carousel. Width can be changed as needed. */
-.carousel-wrapper {
+.carousel-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
+  /* Setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
+  /* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
+  /* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
+  /* Set 'z-index' to sit behind our '.active' item. */
+  /* Translate previous item to the left */
+  /* Translate next item to the right */
+  /* Style navigation buttons to sit in the middle, either side of the carousel. */
+  /* Use pseudo elements to insert arrows inside of navigation buttons */
+}
+.carousel-section .carousel-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,12 +288,10 @@ body {
   margin: auto;
   margin-top: 44px;
 }
-/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
-.carousel-wrapper * {
+.carousel-section .carousel-wrapper * {
   box-sizing: border-box;
 }
-/* Setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
-.carousel {
+.carousel-section .carousel {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -269,8 +300,7 @@ body {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
-.carousel__photo {
+.carousel-section .carousel__photo {
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -278,29 +308,24 @@ body {
   z-index: 2;
   transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
 }
-/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
-.carousel__photo.initial,
-.carousel__photo.active {
+.carousel-section .carousel__photo.initial,
+.carousel-section .carousel__photo.active {
   opacity: 1;
   position: relative;
   z-index: 4;
 }
-/* Set 'z-index' to sit behind our '.active' item. */
-.carousel__photo.prev,
-.carousel__photo.next {
+.carousel-section .carousel__photo.prev,
+.carousel-section .carousel__photo.next {
   z-index: 5;
 }
-/* Translate previous item to the left */
-.carousel__photo.prev {
+.carousel-section .carousel__photo.prev {
   transform: translateX(-100%);
 }
-/* Translate next item to the right */
-.carousel__photo.next {
+.carousel-section .carousel__photo.next {
   transform: translateX(100%);
 }
-/* Style navigation buttons to sit in the middle, either side of the carousel. */
-.carousel__button--prev,
-.carousel__button--next {
+.carousel-section .carousel__button--prev,
+.carousel-section .carousel__button--next {
   position: absolute;
   top: 50%;
   width: 3rem;
@@ -315,15 +340,14 @@ body {
   /*  opacity: 0;  Hide buttons until carousel is initialised 
     transition:opacity 1s;*/
 }
-.carousel__button--prev {
+.carousel-section .carousel__button--prev {
   left: 0;
 }
-.carousel__button--next {
+.carousel-section .carousel__button--next {
   right: 0;
 }
-/* Use pseudo elements to insert arrows inside of navigation buttons */
-.carousel__button--prev::after,
-.carousel__button--next::after {
+.carousel-section .carousel__button--prev::after,
+.carousel-section .carousel__button--next::after {
   content: ' ';
   position: absolute;
   width: 10px;
@@ -334,7 +358,7 @@ body {
   border-bottom: 2px solid black;
   transform: translate(-50%, -50%) rotate(135deg);
 }
-.carousel__button--next::after {
+.carousel-section .carousel__button--next::after {
   left: 47%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
@@ -346,11 +370,6 @@ body {
   width: 100%;
   margin-top: 16px;
   flex-wrap: wrap;
-}
-@media (min-width: 1200px) {
-  .story-container {
-    width: 1200px;
-  }
 }
 .story-container .story {
   border-bottom: 1px solid #f3e0dc;
@@ -441,38 +460,99 @@ body {
   color: #5c2018;
   border: 2px solid #5c2018;
 }
-.footer {
+.footer-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   width: 100%;
   background-color: #5c2018;
 }
-.footer div {
+.footer-container div {
   padding: 0 1rem;
 }
-.footer .app-link {
-  display: flex;
-  justify-content: none;
-  align-items: none;
-  flex-direction: column;
+@media (max-width: 500px) {
+  .footer-container div:last-child {
+    display: none;
+  }
 }
-.footer img {
+.footer-container a {
+  text-decoration: none;
+  color: #f3e0dc;
+}
+.footer-container a:hover {
+  color: #4285f4;
+}
+.footer-container img {
   block-size: 2rem;
   margin-bottom: 0.75rem;
 }
-.footer ul {
+.footer-container ul {
   list-style: none;
   padding: 0;
+  color: #f3e0dc;
 }
-.footer ul li:hover {
+.footer-container ul li:hover {
   cursor: pointer;
   color: #4285f4;
 }
 .about-container {
-  margin: 2rem 1rem;
+  margin: 0 1rem;
+  margin-top: 2rem;
+  color: #f3e0dc;
 }
 .about-container .about-border {
   border: 1px solid #5c2018;
+}
+.team {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-direction: row;
+  width: 100%;
+  flex-flow: wrap;
+}
+.team .teammate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 210px;
+  background-color: #f3e0dc;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #5c2018;
+}
+.team .teammate .img {
+  height: 200px;
+}
+.team .teammate .img img {
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid #5c2018;
+}
+.team .teammate h4 {
+  color: #5c2018;
+  margin: 0.5rem;
+  text-align: center;
+}
+.team .teammate p {
+  color: #bc4639;
+  margin: 0.5rem;
+  text-align: center;
+}
+.team .social-link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 40px;
+}
+.team .social-link img {
+  width: 40px;
+}
+.team .social-link .github {
+  width: 35px;
 }

@@ -4,11 +4,12 @@
 	position: fixed;
 	height: 44px;
 	background-color: @primary-color-rose;
-	position: fixed;
 	z-index: 10;
+	color: @secondary-color-beige;
 
 	.mobile-menu {
 		display: none;
+		color: @secondary-color-beige;
 	}
 	.menu {
 		display: none;
@@ -27,6 +28,8 @@
 			h1 {
 				margin: 0;
 				font-size: 1.8rem;
+				text-decoration: none;
+				color: @secondary-color-beige;
 			}
 			img {
 				height: 2em;
@@ -89,6 +92,9 @@
 			margin: 0 10%;
 			font-weight: bold;
 			white-space: nowrap;
+			@media (max-width: @tablet-view) {
+				display: none;
+			}
 		}
 		img {
 			width: auto;
@@ -109,6 +115,9 @@
 			margin-right: 5%;
 			&:last-child {
 				margin-right: 0;
+				@media (max-width: @tablet-view) {
+					display: none;
+				}
 			}
 			&:hover {
 				text-decoration: underline;

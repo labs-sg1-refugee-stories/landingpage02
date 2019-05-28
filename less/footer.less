@@ -1,12 +1,22 @@
-.footer {
-	.flex(center, center, row);
+.footer-container {
+	.flex(space-around, center, row);
 	width: 100%;
 	background-color: @primary-color-rose;
+
 	div {
 		padding: 0 1rem;
+		&:last-child {
+			@media (max-width: @mobile-view) {
+				display: none;
+			}
+		}
 	}
-	.app-link {
-		.flex(none, none, column);
+	a {
+		text-decoration: none;
+		color: @secondary-color-beige;
+		&:hover {
+			color: @primary-color-blue;
+		}
 	}
 
 	img {
@@ -16,6 +26,7 @@
 	ul {
 		list-style: none;
 		padding: 0;
+		color: @secondary-color-beige;
 		li {
 			&:hover {
 				cursor: pointer;
